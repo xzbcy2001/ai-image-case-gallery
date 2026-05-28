@@ -1,0 +1,21 @@
+{
+  "name": "AI 图片处理前后对比案例馆",
+  "short_name": "AI 案例馆",
+  "description": "展示 AI 图片处理原图到成图的真实变化。",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f4f1ea",
+  "theme_color": "#181715",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

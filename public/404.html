@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>正在返回案例页</title>
+  </head>
+  <body>
+    <script>
+      (function () {
+        var parts = window.location.pathname.split("/").filter(Boolean);
+        var repo = window.location.hostname.endsWith("github.io") && parts.length > 0 ? "/" + parts[0] + "/" : "/";
+        window.location.replace(window.location.origin + repo + window.location.search + window.location.hash);
+      })();
+    </script>
+  </body>
+</html>

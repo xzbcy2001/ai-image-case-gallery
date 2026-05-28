@@ -1,0 +1,590 @@
+{
+  "cases": [
+    {
+      "id": "blend",
+      "navLabel": "智能溶图",
+      "tag": "IMAGE BLENDING",
+      "title": "AI 智能人物溶图",
+      "subtitle": "白底图/绿幕素材 → 融入逼真环境",
+      "desc": "适合展示商品海报和人像合成：上传白底商品图或人物，AI 自动匹配光影、材质与透视关系，一键生成毫无违和感的高品质实景海报。",
+      "chips": [
+        "光影透视匹配",
+        "真实场景构建",
+        "提升视觉转化"
+      ],
+      "theme": "green",
+      "layout": "compareHero",
+      "images": [
+        {
+          "id": "bl1",
+          "label": "原图素材",
+          "url": "",
+          "aspectRatio": "1320 / 1740",
+          "aspectLabel": "3:4"
+        },
+        {
+          "id": "bl2",
+          "label": "AI 溶图效果",
+          "url": "/uploads/file-1779074658269-336370941.png",
+          "aspectRatio": "3584 / 4800",
+          "aspectLabel": "3:4",
+          "width": 3584,
+          "height": 4800
+        },
+        {
+          "id": "bl3",
+          "label": "原图素材",
+          "url": "",
+          "aspectRatio": "3 / 4",
+          "aspectLabel": "3:4"
+        },
+        {
+          "id": "bl4",
+          "label": "AI 溶图效果",
+          "url": "/uploads/file-1779074744118-120992604.png",
+          "aspectRatio": "3072 / 5504",
+          "aspectLabel": "9:16",
+          "width": 3072,
+          "height": 5504
+        },
+        {
+          "id": "blend-before-1779074843884",
+          "label": "原图",
+          "url": "",
+          "aspectRatio": "6240 / 4160",
+          "aspectLabel": "3:2"
+        },
+        {
+          "id": "blend-after-1779074843884",
+          "label": "AI成图",
+          "url": "/uploads/file-1779074899570-308788858.jpg",
+          "aspectRatio": "3072 / 5504",
+          "aspectLabel": "9:16",
+          "width": 3072,
+          "height": 5504
+        },
+        {
+          "id": "blend-before-1779074868753",
+          "label": "原图",
+          "url": "",
+          "aspectRatio": "16 / 9",
+          "aspectLabel": "16:9"
+        },
+        {
+          "id": "blend-after-1779074868753",
+          "label": "AI成图",
+          "url": "/uploads/file-1779074873863-181322918.jpg",
+          "aspectRatio": "5056 / 3392",
+          "aspectLabel": "3:2",
+          "width": 5056,
+          "height": 3392
+        }
+      ],
+      "hidden": true
+    },
+    {
+      "id": "tone",
+      "navLabel": "调色调光",
+      "tag": "BEFORE / AFTER",
+      "title": "AI 自动调色调光转电影感案例",
+      "subtitle": "普通照片 → 电影光影成片",
+      "desc": "适合展示普通实拍照经过批量处理后，统一升级为电影级光影、复古胶片、暖调氛围或暗调质感。",
+      "chips": [
+        "一张原图一张成图",
+        "强化光影层次",
+        "统一电影色调"
+      ],
+      "theme": "brown",
+      "layout": "compareHero",
+      "images": [
+        {
+          "id": "t1",
+          "label": "原图",
+          "url": "",
+          "aspectRatio": "16 / 9"
+        },
+        {
+          "id": "t2",
+          "label": "AI成图",
+          "url": "",
+          "aspectRatio": "16 / 9"
+        },
+        {
+          "id": "t3",
+          "label": "原图",
+          "url": "",
+          "aspectRatio": "4 / 3"
+        },
+        {
+          "id": "t4",
+          "label": "AI成图",
+          "url": "",
+          "aspectRatio": "4 / 3"
+        }
+      ],
+      "hidden": true
+    },
+    {
+      "id": "pose",
+      "navLabel": "修改姿势",
+      "tag": "POSE MODIFICATION",
+      "title": "AI 改变人物姿势动作",
+      "subtitle": "随性街拍 → 专业人像摆姿",
+      "desc": "适合展示人物动作重构：无需重新拍摄，通过 AI 改变人物肢体结构、面部朝向、局部手部动作，修正体态和眼神。",
+      "chips": [
+        "重新构建动作",
+        "修复肢体比例",
+        "自然手部姿态"
+      ],
+      "theme": "red",
+      "layout": "compareCards",
+      "images": [
+        {
+          "id": "p1",
+          "label": "原图",
+          "url": "",
+          "aspectRatio": "3584 / 4800",
+          "aspectLabel": "3:4"
+        },
+        {
+          "id": "p2",
+          "label": "AI成图",
+          "url": "/uploads/file-1779074568822-524549761.png",
+          "aspectRatio": "3584 / 4800",
+          "aspectLabel": "3:4",
+          "width": 3584,
+          "height": 4800
+        },
+        {
+          "id": "p3",
+          "label": "原图",
+          "url": "/uploads/file-1779074514974-951231058.jpg",
+          "aspectRatio": "3584 / 4800",
+          "aspectLabel": "3:4",
+          "width": 3584,
+          "height": 4800
+        },
+        {
+          "id": "p4",
+          "label": "AI成图",
+          "url": "",
+          "aspectRatio": "1194 / 1600",
+          "aspectLabel": "3:4"
+        }
+      ],
+      "hidden": true
+    },
+    {
+      "id": "angles",
+      "navLabel": "多机位视角",
+      "tag": "MULTI-ANGLES",
+      "title": "单图生成多机位/多视角",
+      "subtitle": "一张参考图 → 覆盖全景/特写/俯拍/仰拍",
+      "desc": "适合展示商品摄影或空间渲染：仅需一张参考正视图，AI 即可自动推算并延伸出不同的拍摄角度、局部特写，零成本丰富视觉素材库。",
+      "chips": [
+        "单图多机位",
+        "特写与全景",
+        "真实感透视"
+      ],
+      "theme": "green",
+      "layout": "compareCards",
+      "images": [
+        {
+          "id": "a1",
+          "label": "主视角原图",
+          "url": "/uploads/file-1779074273542-993578027.png",
+          "aspectRatio": "3584 / 4800",
+          "aspectLabel": "3:4",
+          "width": 3584,
+          "height": 4800
+        },
+        {
+          "id": "a2",
+          "label": "AI 生成视角A (俯拍)",
+          "url": "",
+          "aspectRatio": "4 / 3",
+          "aspectLabel": "4:3"
+        },
+        {
+          "id": "a3",
+          "label": "主视角原图",
+          "url": "",
+          "aspectRatio": "4 / 3",
+          "aspectLabel": "4:3"
+        },
+        {
+          "id": "a4",
+          "label": "AI 生成视角B (特写)",
+          "url": "",
+          "aspectRatio": "4 / 3",
+          "aspectLabel": "4:3"
+        },
+        {
+          "id": "a5",
+          "label": "主视角原图",
+          "url": "",
+          "aspectRatio": "4 / 3",
+          "aspectLabel": "4:3"
+        },
+        {
+          "id": "a6",
+          "label": "AI 生成视角C (仰拍)",
+          "url": "",
+          "aspectRatio": "4 / 3",
+          "aspectLabel": "4:3"
+        }
+      ],
+      "hidden": true
+    },
+    {
+      "id": "inpainting",
+      "navLabel": "局部重绘",
+      "tag": "INPAINTING",
+      "title": "AI 局部重绘与替换",
+      "subtitle": "局部涂抹 → 智能无痕替换",
+      "desc": "适合展示局部元素的增加、删除、替换等修改，例如替换衣服、修改面部表情、或者背景杂物消除。AI 智能融合周围像素，实现无痕修改。",
+      "chips": [
+        "无痕杂物消除",
+        "服饰一键替换",
+        "自然融入原图"
+      ],
+      "theme": "dark",
+      "layout": "compareCards",
+      "images": [
+        {
+          "id": "in1",
+          "label": "原图素材",
+          "url": "",
+          "aspectRatio": "3 / 4",
+          "aspectLabel": "3:4"
+        },
+        {
+          "id": "in2",
+          "label": "AI 局部重绘",
+          "url": "",
+          "aspectRatio": "3 / 4",
+          "aspectLabel": "3:4"
+        },
+        {
+          "id": "in3",
+          "label": "原图素材",
+          "url": "",
+          "aspectRatio": "16 / 9",
+          "aspectLabel": "16:9"
+        },
+        {
+          "id": "in4",
+          "label": "AI 局部重绘",
+          "url": "",
+          "aspectRatio": "16 / 9",
+          "aspectLabel": "16:9"
+        }
+      ],
+      "hidden": true
+    },
+    {
+      "id": "portrait-retouch",
+      "navLabel": "人像精修",
+      "tag": "PORTRAIT RETOUCH",
+      "title": "AI 人像自然精修案例",
+      "subtitle": "普通人像 → 肤色光影自然优化",
+      "desc": "适合展示人像照片的自然修饰：统一肤色、弱化瑕疵、提亮面部光影，同时保留真实纹理，避免过度磨皮的塑料感。",
+      "chips": [
+        "自然肤质保留",
+        "面部光影优化",
+        "适合写真与形象照"
+      ],
+      "theme": "rose",
+      "layout": "compareHero",
+      "images": [
+        {
+          "id": "portrait-retouch-before-1",
+          "label": "原始人像",
+          "url": "",
+          "aspectRatio": "3 / 4",
+          "aspectLabel": "3:4"
+        },
+        {
+          "id": "portrait-retouch-after-1",
+          "label": "AI自然精修",
+          "url": "",
+          "aspectRatio": "3 / 4",
+          "aspectLabel": "3:4"
+        },
+        {
+          "id": "portrait-retouch-before-2",
+          "label": "原始近景",
+          "url": "",
+          "aspectRatio": "1 / 1",
+          "aspectLabel": "1:1"
+        },
+        {
+          "id": "portrait-retouch-after-2",
+          "label": "肤色光影优化",
+          "url": "",
+          "aspectRatio": "1 / 1",
+          "aspectLabel": "1:1"
+        }
+      ],
+      "hidden": true
+    },
+    {
+      "id": "headshot-id-photo",
+      "navLabel": "职业头像",
+      "tag": "ID PHOTO / HEADSHOT",
+      "title": "AI 证件照与职业头像案例",
+      "subtitle": "生活照 → 标准证件照 / 商务头像",
+      "desc": "适合展示一张普通生活照生成不同用途头像：白底证件照、蓝底登记照、商务职业头像、个人主页形象照。",
+      "chips": [
+        "背景标准化",
+        "服装氛围统一",
+        "适配多平台头像"
+      ],
+      "theme": "blue",
+      "layout": "compareCards",
+      "images": [
+        {
+          "id": "headshot-before-1",
+          "label": "生活照",
+          "url": "",
+          "aspectRatio": "3 / 4",
+          "aspectLabel": "3:4"
+        },
+        {
+          "id": "headshot-after-1",
+          "label": "标准证件照",
+          "url": "",
+          "aspectRatio": "3 / 4",
+          "aspectLabel": "3:4"
+        },
+        {
+          "id": "headshot-before-2",
+          "label": "生活原图",
+          "url": "",
+          "aspectRatio": "1 / 1",
+          "aspectLabel": "1:1"
+        },
+        {
+          "id": "headshot-after-2",
+          "label": "职业头像",
+          "url": "",
+          "aspectRatio": "1 / 1",
+          "aspectLabel": "1:1"
+        }
+      ],
+      "hidden": true
+    },
+    {
+      "id": "expression-detail",
+      "navLabel": "细节微调",
+      "tag": "MICRO ADJUSTMENT",
+      "title": "AI 表情与细节微调案例",
+      "subtitle": "表情不自然 / 小瑕疵 → 自然细节修正",
+      "desc": "适合展示轻量级局部修正：调整眼神、嘴角、表情状态，修复手部小瑕疵、衣领褶皱或发丝细节，让照片更自然可用。",
+      "chips": [
+        "表情更自然",
+        "局部瑕疵修复",
+        "不改变整体构图"
+      ],
+      "theme": "neutral",
+      "layout": "comparePoster",
+      "images": [
+        {
+          "id": "expression-before-1",
+          "label": "原始表情",
+          "url": "",
+          "aspectRatio": "3 / 4",
+          "aspectLabel": "3:4"
+        },
+        {
+          "id": "expression-after-1",
+          "label": "AI表情优化",
+          "url": "",
+          "aspectRatio": "3 / 4",
+          "aspectLabel": "3:4"
+        },
+        {
+          "id": "expression-before-2",
+          "label": "局部细节",
+          "url": "",
+          "aspectRatio": "4 / 5",
+          "aspectLabel": "4:5"
+        },
+        {
+          "id": "expression-after-2",
+          "label": "细节修正",
+          "url": "",
+          "aspectRatio": "4 / 5",
+          "aspectLabel": "4:5"
+        }
+      ],
+      "hidden": true
+    },
+    {
+      "id": "old-photo-restore",
+      "navLabel": "老照片修复",
+      "tag": "PHOTO RESTORATION",
+      "title": "AI 老照片修复与上色案例",
+      "subtitle": "模糊泛黄旧照 → 清晰修复 / 自然上色",
+      "desc": "适合展示旧照片的情绪化修复：提升清晰度、修补破损划痕、降低泛黄噪点，并可生成自然彩色版本。",
+      "chips": [
+        "划痕破损修补",
+        "黑白照片上色",
+        "家庭影像修复"
+      ],
+      "theme": "gold",
+      "layout": "compareHero",
+      "images": [
+        {
+          "id": "restore-before-1",
+          "label": "老照片原图",
+          "url": "",
+          "aspectRatio": "4 / 3",
+          "aspectLabel": "4:3"
+        },
+        {
+          "id": "restore-after-1",
+          "label": "AI高清修复",
+          "url": "",
+          "aspectRatio": "4 / 3",
+          "aspectLabel": "4:3"
+        },
+        {
+          "id": "restore-before-2",
+          "label": "黑白旧照",
+          "url": "",
+          "aspectRatio": "3 / 4",
+          "aspectLabel": "3:4"
+        },
+        {
+          "id": "restore-after-2",
+          "label": "AI自然上色",
+          "url": "",
+          "aspectRatio": "3 / 4",
+          "aspectLabel": "3:4"
+        }
+      ],
+      "hidden": true
+    },
+    {
+      "id": "upscale-enhance",
+      "navLabel": "高清放大",
+      "tag": "UPSCALE / ENHANCE",
+      "title": "AI 高清放大与画质增强案例",
+      "subtitle": "低清小图 → 细节增强 / 4X 高清输出",
+      "desc": "适合展示低分辨率素材的修复能力：放大尺寸、增强边缘细节、恢复纹理层次，让小图也能用于海报、电商详情和打印场景。",
+      "chips": [
+        "4X高清放大",
+        "纹理细节增强",
+        "低清素材复用"
+      ],
+      "theme": "green",
+      "layout": "highResZoom",
+      "images": [
+        {
+          "id": "upscale-before-1",
+          "label": "低清原图",
+          "url": "",
+          "aspectRatio": "4 / 3",
+          "aspectLabel": "4:3"
+        },
+        {
+          "id": "upscale-after-1",
+          "label": "AI高清增强",
+          "url": "",
+          "aspectRatio": "4 / 3",
+          "aspectLabel": "4:3"
+        },
+        {
+          "id": "upscale-before-2",
+          "label": "局部细节原图",
+          "url": "",
+          "aspectRatio": "1 / 1",
+          "aspectLabel": "1:1"
+        },
+        {
+          "id": "upscale-after-2",
+          "label": "局部放大结果",
+          "url": "",
+          "aspectRatio": "1 / 1",
+          "aspectLabel": "1:1"
+        }
+      ],
+      "hidden": true
+    },
+    {
+      "id": "outpaint-reframe",
+      "navLabel": "扩图改构图",
+      "tag": "OUTPAINT / REFRAME",
+      "title": "AI 扩图与多尺寸构图案例",
+      "subtitle": "单张原图 → 横版海报 / 竖版封面 / Banner",
+      "desc": "适合展示一张图适配多平台尺寸：智能补全画面边缘，扩展背景空间，生成小红书封面、公众号头图、电商横幅等不同构图。",
+      "chips": [
+        "智能补全边缘",
+        "多平台尺寸适配",
+        "横竖版快速生成"
+      ],
+      "theme": "purple",
+      "layout": "compareGrid",
+      "images": [
+        {
+          "id": "outpaint-before-1",
+          "label": "原始构图",
+          "url": "",
+          "aspectRatio": "3 / 4",
+          "aspectLabel": "3:4"
+        },
+        {
+          "id": "outpaint-after-1",
+          "label": "竖版封面",
+          "url": "",
+          "aspectRatio": "9 / 16",
+          "aspectLabel": "9:16"
+        },
+        {
+          "id": "outpaint-before-2",
+          "label": "原始构图",
+          "url": "",
+          "aspectRatio": "3 / 4",
+          "aspectLabel": "3:4"
+        },
+        {
+          "id": "outpaint-after-2",
+          "label": "横版海报",
+          "url": "",
+          "aspectRatio": "16 / 9",
+          "aspectLabel": "16:9"
+        },
+        {
+          "id": "outpaint-before-3",
+          "label": "原始构图",
+          "url": "",
+          "aspectRatio": "1 / 1",
+          "aspectLabel": "1:1"
+        },
+        {
+          "id": "outpaint-after-3",
+          "label": "电商Banner",
+          "url": "",
+          "aspectRatio": "3 / 1",
+          "aspectLabel": "3:1"
+        }
+      ],
+      "hidden": true
+    }
+  ],
+  "siteConfig": {
+    "topBadge": "批量处理案例展示页模板",
+    "heroTitle": "AI 批量图片处理\n前后对比案例馆",
+    "heroDesc": "重点展示“原图 → AI成图”的真实变化。适合展示调色调光、风格转换、主题写真、婚纱样片、电商图优化等批量处理结果。",
+    "allTabLabel": "全部案例",
+    "processSteps": [
+      "上传原图",
+      "选择风格",
+      "AI批量处理",
+      "生成成图"
+    ],
+    "tipText": "核心展示逻辑：每组案例必须是一张原图 + 一张成图，让用户一眼看到处理前后的差异。",
+    "footerText": "BEFORE · AFTER · AI IMAGE CASES"
+  }
+}
