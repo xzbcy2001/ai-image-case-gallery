@@ -875,12 +875,45 @@ function PairStatus({ before, after, theme }: any) {
   );
 }
 
+const posterFeatureIcons = [Camera, Sparkles, Heart, Images, SlidersHorizontal, CheckCircle2];
+
+function getPosterLetter(index: number) {
+  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  return letters[index % letters.length] || String(index + 1);
+}
+
+function PosterFeatureStrip({ chips = [], theme }: any) {
+  const items = chips.length ? chips : ["画面更完整", "风格更统一", "出片更高效"];
+
+  return (
+    <div className={`mt-8 border-t ${theme.border} pt-6 font-sans`}>
+      <div className="grid gap-4 md:grid-cols-3">
+        {items.slice(0, 3).map((chip: string, index: number) => {
+          const Icon = posterFeatureIcons[index % posterFeatureIcons.length];
+          return (
+            <div key={`${chip}-${index}`} className="flex items-center justify-center gap-3 border-[#8c7851]/14 md:border-r last:border-r-0">
+              <div className={`flex h-10 w-10 flex-none items-center justify-center rounded-full ${theme.accent} text-white shadow-sm`}>
+                <Icon className="h-4 w-4" />
+              </div>
+              <div className="min-w-0">
+                <div className="text-sm font-semibold text-[#4a3f35]">{chip}</div>
+                <div className="mt-0.5 text-[10px] text-[#4a3f35]/45">AI IMAGE CASE</div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
 function ComparisonPair({ pair, index, layout, theme, onUpdateImage, onRemoveImage, onOpenLightbox, blockId, isEditMode, shareMode = false, comparisonMode = "slider" }: any) {
   const before = pair.before || { id: `before-${index}`, label: "原图", url: "", aspectRatio: "", aspectLabel: "" };
   const after = pair.after || { id: `after-${index}`, label: "AI成图", url: "", aspectRatio: "", aspectLabel: "" };
   const pairAspect = after.url ? after.aspectRatio : before.url ? before.aspectRatio : after.aspectRatio || before.aspectRatio || undefined;
   const pairAspectLabel = after.url ? after.aspectLabel : before.url ? before.aspectLabel : after.aspectLabel || before.aspectLabel || "自动比例";
   const effectiveLayout = comparisonMode === "cards" ? "compareCards" : layout;
+  const posterLetter = getPosterLetter(index);
   const previewImages = [before, after].filter(hasImageUrl);
   const openPreview = (image: any) => {
     if (!image?.url || !onOpenLightbox) return;
@@ -896,29 +929,58 @@ function ComparisonPair({ pair, index, layout, theme, onUpdateImage, onRemoveIma
 
   if (canUseSlider) {
     return (
-      <div className={`relative overflow-hidden rounded-lg border ${theme.border} bg-white p-3 shadow-xl shadow-black/10`}>
-        <BeforeAfterSlider before={before} after={after} aspectRatio={pairAspect} theme={theme} />
+      <motion.article
+        initial={{ opacity: 0, y: 18 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-40px" }}
+        transition={{ duration: 0.45, delay: index * 0.04, ease: "easeOut" }}
+        className={`relative overflow-hidden rounded-md border ${theme.border} bg-white/72 p-3 shadow-[0_18px_45px_rgba(52,47,42,0.08)]`}
+      >
+        <div className="mb-3 flex items-center justify-between gap-3 px-1 font-sans">
+          <div className="flex items-center gap-3">
+            <span className={`flex h-9 w-9 items-center justify-center rounded-full ${theme.dark} font-serif text-lg text-white shadow-sm`}>
+              {posterLetter}
+            </span>
+            <div className="flex items-center gap-2 text-[11px] font-semibold text-[#4a3f35]/65">
+              <span>原始图片</span>
+              <ArrowRight className={`h-3.5 w-3.5 ${theme.accentText}`} />
+              <span>效果展示</span>
+            </div>
+          </div>
+          <span className="text-[10px] font-semibold text-[#4a3f35]/35">{pairAspectLabel}</span>
+        </div>
+        <div className={`overflow-hidden rounded-sm border ${theme.border} bg-[#fdfaf6] p-2`}>
+          <BeforeAfterSlider before={before} after={after} aspectRatio={pairAspect} theme={theme} />
+        </div>
         <button
           type="button"
           onClick={() => openPreview(after)}
-          className="absolute right-6 top-6 z-30 inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/55 px-3 py-2 font-sans text-[10px] font-bold uppercase tracking-widest text-white shadow-lg backdrop-blur transition hover:bg-black/70"
+          className="absolute right-6 top-16 z-30 inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/55 px-3 py-2 font-sans text-[10px] font-bold text-white shadow-lg backdrop-blur transition hover:bg-black/70"
         >
           <Maximize2 className="h-3.5 w-3.5" />
           大图
         </button>
-        <div className="mt-3 flex items-center justify-between px-1 font-sans text-[10px] font-bold uppercase tracking-widest text-[#4a3f35]/50">
-          <span>BEFORE / AFTER</span>
-          <span>{pairAspectLabel}</span>
-        </div>
-      </div>
+      </motion.article>
     );
   }
 
   if (effectiveLayout === "comparePoster") {
     return (
-      <div className={`relative overflow-hidden rounded-lg border ${theme.border} bg-[#fdfaf6] p-4 shadow-xl shadow-black/10 md:p-6`}>
-        <div className="absolute right-6 top-5 rounded-full bg-white/70 px-4 py-1.5 text-[10px] font-sans font-bold uppercase tracking-widest text-[#4a3f35] border border-black/10">
-          BEFORE / AFTER · {pairAspectLabel}
+      <motion.article
+        initial={{ opacity: 0, y: 18 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-40px" }}
+        transition={{ duration: 0.45, delay: index * 0.04, ease: "easeOut" }}
+        className={`relative overflow-hidden rounded-md border ${theme.border} bg-[#fdfaf6] p-4 shadow-[0_18px_45px_rgba(52,47,42,0.08)] md:p-6`}
+      >
+        <div className="mb-4 flex items-center justify-between gap-3 font-sans">
+          <div className="flex items-center gap-3">
+            <span className={`flex h-9 w-9 items-center justify-center rounded-full ${theme.dark} font-serif text-lg text-white shadow-sm`}>
+              {posterLetter}
+            </span>
+            <span className="text-[11px] font-semibold text-[#4a3f35]/60">原始图片 → 效果展示</span>
+          </div>
+          <span className="text-[10px] font-semibold text-[#4a3f35]/35">{pairAspectLabel}</span>
         </div>
         {!shareMode && <PairStatus before={before} after={after} theme={theme} />}
         <div className="grid gap-4 md:grid-cols-[0.7fr_1.3fr] md:items-end">
@@ -957,7 +1019,7 @@ function ComparisonPair({ pair, index, layout, theme, onUpdateImage, onRemoveIma
           <ArrowRight className="h-4 w-4" />
           <span>AI RESULT</span>
         </div>
-      </div>
+      </motion.article>
     );
   }
 
@@ -1023,18 +1085,32 @@ function ComparisonPair({ pair, index, layout, theme, onUpdateImage, onRemoveIma
 
   if (effectiveLayout === "compareCards") {
     return (
-      <div className={`relative rounded-lg border ${theme.border} bg-white/50 p-4 shadow-sm`}>
+      <motion.article
+        initial={{ opacity: 0, y: 18 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-40px" }}
+        transition={{ duration: 0.45, delay: index * 0.04, ease: "easeOut" }}
+        className={`relative overflow-hidden rounded-md border ${theme.border} bg-white/70 p-4 shadow-[0_18px_45px_rgba(52,47,42,0.08)]`}
+      >
         {!shareMode && <PairStatus before={before} after={after} theme={theme} />}
-        <CompareBridge theme={theme} index={index} />
+        <div className="mb-4 flex items-center justify-between gap-3 font-sans">
+          <div className="flex items-center gap-3">
+            <span className={`flex h-9 w-9 items-center justify-center rounded-full ${theme.dark} font-serif text-lg text-white shadow-sm`}>
+              {posterLetter}
+            </span>
+            <span className="text-[11px] font-semibold text-[#4a3f35]/60">左侧原图 / 右侧效果图</span>
+          </div>
+          <span className="text-[10px] font-semibold text-[#4a3f35]/35">{pairAspectLabel}</span>
+        </div>
         <div className="grid gap-4 md:grid-cols-2">
-          <div className="relative md:-rotate-1">
-            <div className="mb-3 flex items-center justify-between rounded-full bg-white/80 border border-black/10 px-4 py-1.5 text-[10px] font-sans font-bold uppercase tracking-widest text-[#4a3f35]">
+          <div className={`relative overflow-hidden rounded-sm border ${theme.border} bg-[#fdfaf6] p-2`}>
+            <div className="mb-2 flex items-center justify-between px-1 font-sans text-[10px] font-semibold text-[#4a3f35]/45">
+              <span>原始拍摄</span>
               <span>BEFORE</span>
-              <span>ORIGINAL</span>
             </div>
             <UploadTile
               item={before}
-              className=""
+              className="shadow-sm"
               labelTone="light"
               frameAspectRatio={pairAspect}
               imageFit="contain"
@@ -1044,14 +1120,14 @@ function ComparisonPair({ pair, index, layout, theme, onUpdateImage, onRemoveIma
               onRemove={() => onRemoveImage(blockId, pair.beforeIndex)}
             />
           </div>
-          <div className="relative md:translate-y-6 md:rotate-1">
-            <div className={`mb-3 flex items-center justify-between rounded-full ${theme.dark} px-4 py-1.5 text-[10px] font-sans font-bold uppercase tracking-widest text-white`}>
+          <div className={`relative overflow-hidden rounded-sm border ${theme.border} bg-[#fdfaf6] p-2`}>
+            <div className={`mb-2 flex items-center justify-between px-1 font-sans text-[10px] font-semibold ${theme.accentText}`}>
+              <span>效果展示</span>
               <span>AFTER</span>
-              <span>AI RESULT</span>
             </div>
             <UploadTile
               item={after}
-              className=""
+              className="shadow-sm"
               frameAspectRatio={pairAspect}
               imageFit="contain"
               isEditMode={isEditMode}
@@ -1061,18 +1137,37 @@ function ComparisonPair({ pair, index, layout, theme, onUpdateImage, onRemoveIma
             />
           </div>
         </div>
-      </div>
+      </motion.article>
     );
   }
 
   return (
-    <div className={`relative overflow-hidden rounded-lg border ${theme.border} bg-white p-4 shadow-xl shadow-black/5`}>
+    <motion.article
+      initial={{ opacity: 0, y: 18 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-40px" }}
+      transition={{ duration: 0.45, delay: index * 0.04, ease: "easeOut" }}
+      className={`relative overflow-hidden rounded-md border ${theme.border} bg-white/72 p-4 shadow-[0_18px_45px_rgba(52,47,42,0.08)]`}
+    >
       {!shareMode && <PairStatus before={before} after={after} theme={theme} />}
-      <CompareBridge theme={theme} index={index} />
-      <div className="grid gap-3 md:grid-cols-2">
-        <div className="relative">
-          <div className="absolute left-5 top-5 z-20 rounded-full bg-white/80 px-4 py-1.5 text-[10px] font-sans font-bold uppercase tracking-widest text-[#4a3f35] border border-black/10 shadow-sm backdrop-blur-md">
-            BEFORE
+      <div className="mb-4 flex items-center justify-between gap-3 font-sans">
+        <div className="flex items-center gap-3">
+          <span className={`flex h-9 w-9 items-center justify-center rounded-full ${theme.dark} font-serif text-lg text-white shadow-sm`}>
+            {posterLetter}
+          </span>
+          <div className="flex items-center gap-2 text-[11px] font-semibold text-[#4a3f35]/60">
+            <span>原图</span>
+            <ArrowRight className={`h-3.5 w-3.5 ${theme.accentText}`} />
+            <span>AI成图</span>
+          </div>
+        </div>
+        <span className="text-[10px] font-semibold text-[#4a3f35]/35">{pairAspectLabel}</span>
+      </div>
+      <div className={`grid gap-px overflow-hidden rounded-sm border ${theme.border} bg-[#d8cdbb] md:grid-cols-2`}>
+        <div className="relative bg-[#fdfaf6] p-2">
+          <div className="mb-2 flex items-center justify-between px-1 font-sans text-[10px] font-semibold text-[#4a3f35]/45">
+            <span>原始拍摄</span>
+            <span>BEFORE</span>
           </div>
           <UploadTile
             item={before}
@@ -1086,9 +1181,10 @@ function ComparisonPair({ pair, index, layout, theme, onUpdateImage, onRemoveIma
             onRemove={() => onRemoveImage(blockId, pair.beforeIndex)}
           />
         </div>
-        <div className="relative">
-          <div className={`absolute left-5 top-5 z-20 rounded-full ${theme.dark} px-4 py-1.5 text-[10px] font-sans font-bold uppercase tracking-widest text-white border border-white/20 shadow-sm backdrop-blur-md`}>
-            AFTER
+        <div className="relative bg-[#fdfaf6] p-2">
+          <div className={`mb-2 flex items-center justify-between px-1 font-sans text-[10px] font-semibold ${theme.accentText}`}>
+            <span>效果展示</span>
+            <span>AFTER</span>
           </div>
           <UploadTile
             item={after}
@@ -1102,7 +1198,7 @@ function ComparisonPair({ pair, index, layout, theme, onUpdateImage, onRemoveIma
           />
         </div>
       </div>
-    </div>
+    </motion.article>
   );
 }
 
@@ -1118,53 +1214,72 @@ function CaseCard({ block, siteConfig, onUpdateImage, onRemoveImage, onAddPair, 
     <motion.section
       id={`case-${block.id}`}
       initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.5, ease: "easeOut" }}
-      className={`relative scroll-mt-24 overflow-hidden rounded-lg border ${theme.border} ${theme.bg} p-6 shadow-xl shadow-black/5 md:p-10`}
+      className={`relative scroll-mt-24 overflow-hidden rounded-md border ${theme.border} bg-[#fbf7ef] p-5 shadow-[0_22px_70px_rgba(52,47,42,0.10)] md:p-8 lg:p-10`}
     >
-      <header className="mb-8 text-center">
-        <div className="mb-4 flex flex-wrap items-center justify-center gap-3 font-sans">
-          <span className={`text-[11px] tracking-[0.4em] uppercase font-bold ${theme.accentText}`}>{block.tag}</span>
+      <div aria-hidden="true" className={`pointer-events-none absolute -left-10 -top-10 h-32 w-40 rounded-br-[80px] ${theme.accent} opacity-[0.08]`} />
+      <div aria-hidden="true" className={`pointer-events-none absolute -right-12 top-8 h-28 w-28 rounded-full border ${theme.border} opacity-50`} />
+      <div aria-hidden="true" className="pointer-events-none absolute inset-x-8 top-5 h-px bg-[#4a3f35]/10" />
+      <header className="relative mb-10 text-center font-sans">
+        <div className="mb-6 flex items-center justify-center gap-4 text-[#4a3f35]/45">
+          <span className="hidden text-[10px] font-semibold sm:inline">CASE STUDY</span>
+          <div className={`h-px flex-1 max-w-[96px] ${theme.border}`} />
+          <Sparkles className={`h-4 w-4 ${theme.accentText}`} />
+          <div className={`h-px flex-1 max-w-[96px] ${theme.border}`} />
+          <span className="hidden text-[10px] font-semibold sm:inline">AI IMAGE</span>
+        </div>
+        <div className="mb-3 flex flex-wrap items-center justify-center gap-3">
+          <span className={`rounded-full border px-4 py-1.5 text-[10px] font-bold ${theme.border} ${theme.chip}`}>
+            {block.tag}
+          </span>
           {isEditMode && block.hidden && (
-            <span className="inline-flex items-center gap-2 rounded-full border border-[#9d4447]/20 bg-[#9d4447]/10 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-[#9d4447]">
-              <EyeOff className="h-3.5 w-3.5" />
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-red-300 bg-red-50 px-3 py-1 text-[10px] font-bold text-red-500">
+              <EyeOff className="h-3 w-3" />
               已隐藏
             </span>
           )}
           {!shareMode && (
-            <span className={`inline-flex items-center gap-2 rounded-full border ${theme.border} bg-white/60 px-3 py-1 text-[10px] font-bold uppercase tracking-widest ${theme.accentText}`}>
-              <CheckCircle2 className="h-3.5 w-3.5" />
-              {progress.uploaded}/{progress.total} 已上传
+            <span className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-[10px] font-bold ${theme.border} ${theme.accentText}`}>
+              <CheckCircle2 className="h-3 w-3" />
+              {progress.uploaded}/{progress.total}
             </span>
           )}
         </div>
-        <h2 className={`text-4xl md:text-5xl font-light mt-2 mb-4 tracking-tight ${theme.ink}`}>
+        <h2 className={`mx-auto max-w-5xl font-serif text-[40px] font-light leading-tight md:text-5xl lg:text-6xl ${theme.ink}`}>
           {block.title}
         </h2>
-        <p className="mt-3 text-base text-[#4a3f35]/60 max-w-2xl mx-auto">{block.subtitle}</p>
-        <p className="mt-2 text-sm text-[#4a3f35]/50 max-w-xl mx-auto">{block.desc}</p>
-        
-        <div className="mt-6 flex justify-center gap-6 text-[11px] uppercase tracking-widest text-[#4a3f35]/60 font-sans flex-wrap">
+        <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-[#4a3f35]/65">{block.subtitle}</p>
+        <p className="mx-auto mt-2 max-w-xl text-sm text-[#4a3f35]/45">{block.desc}</p>
+        <div className="mx-auto mt-7 flex max-w-lg flex-wrap items-center justify-center gap-3">
           {block.chips.map((chip: string, index: number) => (
-            <span key={`${chip}-${index}`} className="flex items-center gap-2">
-              <span className={`w-2 h-2 rounded-full ${theme.accent}`}></span>
+            <span
+              key={chip + "-" + index}
+              className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-[11px] font-medium tracking-wide transition-colors hover:bg-black/[0.03] ${theme.border} ${theme.accentText}`}
+            >
+              <span className={`h-1.5 w-1.5 rounded-full ${theme.accent}`} />
               {chip}
             </span>
           ))}
         </div>
         {!shareMode && (
-          <div className="mx-auto mt-6 h-1.5 max-w-sm overflow-hidden rounded-full bg-black/5">
+          <div className="mx-auto mt-6 h-1 max-w-[200px] overflow-hidden rounded-full bg-black/5">
             <motion.div
               initial={{ width: 0 }}
               animate={{ width: `${progress.percent}%` }}
               transition={{ duration: 0.7, ease: "easeOut" }}
-              className={`h-full ${theme.accent}`}
-            />
+              className={`h-full ${theme.accent}`} />
           </div>
         )}
+        <div className="mt-8 flex items-center justify-center gap-3">
+          <div className={`h-px flex-1 max-w-[120px] ${theme.border}`} />
+          <span className={`text-[9px] font-bold uppercase tracking-[0.5em] ${theme.accentText}`}>CASE</span>
+          <div className={`h-px flex-1 max-w-[120px] ${theme.border}`} />
+        </div>
       </header>
 
-      <div className={`relative z-10 mt-8 ${block.layout === "compareGrid" ? "grid gap-6 lg:grid-cols-2 lg:items-start" : "space-y-6"}`}>
+      <div className={`relative z-10 mt-8 ${block.layout === "compareGrid" ? "grid gap-5 lg:grid-cols-2 lg:items-start" : "space-y-5"}`}>
         {visiblePairs.map((pair, index) => (
           <ComparisonPair
             key={`${pair.before?.id || "before"}-${pair.after?.id || "after"}-${index}`}
@@ -1194,8 +1309,9 @@ function CaseCard({ block, siteConfig, onUpdateImage, onRemoveImage, onAddPair, 
         )}
       </div>
 
-      <footer className={`mt-8 py-6 border-t ${theme.border} flex justify-center`}>
-        <div className={`text-[10px] uppercase tracking-[0.3em] font-bold opacity-80 ${theme.accentText} font-sans`}>{siteConfig.footerText}</div>
+      <footer>
+        <PosterFeatureStrip chips={block.chips} theme={theme} />
+        <div className={`mt-6 text-center font-sans text-[10px] font-bold opacity-60 ${theme.accentText}`}>{siteConfig.footerText}</div>
       </footer>
     </motion.section>
   );
@@ -2463,34 +2579,117 @@ export default function App() {
           />
         )}
 
-        <div className={`grid gap-8 ${clientMode ? "" : "xl:grid-cols-[230px_minmax(0,1fr)]"}`}>
+        <div className={`grid gap-8 ${clientMode ? "" : "lg:grid-cols-[260px_minmax(0,1fr)]"}`}>
           {!clientMode && (
-          <aside className="hidden xl:block">
-            <div className="sticky top-24 rounded-lg border border-[#8c7851]/18 bg-white/70 p-4 font-sans shadow-sm shadow-black/5 backdrop-blur">
-              <div className="mb-4 flex items-center gap-2 text-[11px] font-bold uppercase tracking-widest text-[#8c7851]">
-                <FolderOpen className="h-3.5 w-3.5" />
-                案例目录
+          <aside className="hidden md:block">
+            <div className={`sticky top-0 flex h-screen flex-col border-r border-[#e8e5e0] bg-white font-sans`}>
+              {/* Sidebar header */}
+              <div className="flex-none border-b border-[#e8e5e0] px-5 py-4">
+                <div className="flex items-center gap-2.5">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#8c7851] text-white">
+                    <Images className="h-4 w-4" />
+                  </div>
+                  <div>
+                    <div className="text-sm font-bold text-[#2f3b35]">AI 案例馆</div>
+                    <div className="text-[10px] text-[#9a9186]">{cases.length} 个案例</div>
+                  </div>
+                </div>
               </div>
-              <nav className="space-y-2">
-                {filteredCases.map((block, index) => {
-                  const completePairs = getCompletePairCount(block.images);
+              {/* Scrollable nav */}
+              <nav className="flex-1 overflow-y-auto px-3 py-3">
+                <a
+                  href="#"
+                  onClick={(e) => { e.preventDefault(); setActiveCategory("all"); }}
+                  className={`mb-1 flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm transition-all duration-150 ${activeCategory === "all" ? "bg-blue-50 font-semibold text-blue-600 shadow-sm" : "text-[#5a5550] hover:bg-[#f5f3f0] hover:text-[#2f3b35]"}`}>
+                    <div className={`flex h-7 w-7 flex-none items-center justify-center rounded-md ${activeCategory === "all" ? "bg-blue-100 text-blue-600" : "bg-[#f0eeeb] text-[#9a9186]"}`}>
+                      <Images className="h-3.5 w-3.5" />
+                    </div>
+                    <span className="flex-1">全部案例</span>
+                    <span className={`rounded-full px-2 py-0.5 text-[10px] font-bold ${activeCategory === "all" ? "bg-blue-100 text-blue-600" : "bg-[#f0eeeb] text-[#9a9186]"}`}>
+                      {visibleCases.length}
+                    </span>
+                </a>
+                <div className="my-2 border-t border-[#f0eeeb]" />
+                {categoryOptions.filter(c => c.id !== "all").map((cat) => {
+                  const Icon = categoryIconMap[cat.id] || FolderOpen;
+                  const groupCases = cases.filter((b) => getCaseCategoryId(b) === cat.id);
+                  const isActive = activeCategory === cat.id;
                   return (
-                    <a
-                      key={block.id}
-                      href={`#case-${block.id}`}
-                      className="group grid grid-cols-[32px_1fr_auto] items-center gap-2 rounded-md border border-transparent px-2 py-2 text-xs text-[#4a3f35]/70 transition hover:border-[#8c7851]/20 hover:bg-[#8c7851]/5 hover:text-[#4a3f35]"
-                    >
-                      <span className="text-[10px] font-bold text-[#8c7851]/70">{String(index + 1).padStart(2, "0")}</span>
-                      <span className="truncate font-semibold">{block.navLabel || block.title}</span>
-                      <span className="rounded-full bg-black/5 px-2 py-0.5 text-[10px] font-bold text-[#4a3f35]/45">
-                        {completePairs}组
-                      </span>
-                    </a>
+                    <div key={cat.id} className="mb-1">
+                      <button
+                        type="button"
+                        onClick={() => setActiveCategory(cat.id)}
+                        className={`flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-left text-sm transition-all duration-150 ${isActive ? "bg-blue-50 font-semibold text-blue-600 shadow-sm" : "text-[#5a5550] hover:bg-[#f5f3f0] hover:text-[#2f3b35]"}`}>
+                          <div className={`flex h-7 w-7 flex-none items-center justify-center rounded-md ${isActive ? "bg-blue-100 text-blue-600" : "bg-[#f0eeeb] text-[#9a9186]"}`}>
+                            <Icon className="h-3.5 w-3.5" />
+                          </div>
+                          <span className="flex-1 font-medium">{cat.label}</span>
+                          <span className={`rounded-full px-2 py-0.5 text-[10px] font-bold ${isActive ? "bg-blue-100 text-blue-600" : "bg-[#f0eeeb] text-[#9a9186]"}`}>
+                            {groupCases.length}
+                          </span>
+                        </button>
+                        {isActive && groupCases.length > 0 && (
+                          <div className="ml-4 mt-0.5 space-y-0.5 border-l-2 border-[#e8e5e0] pl-3">
+                            {groupCases.map((block: any) => {
+                              const completePairs = getCompletePairCount(block.images);
+                              const isHidden = block.hidden;
+                              const isFilteredOut = !isEditMode && isHidden;
+                              return (
+                                <div
+                                  key={block.id}
+                                  className={`group flex items-center gap-2 rounded-md px-3 py-1.5 text-xs transition-all duration-150 ${isFilteredOut ? "opacity-40 hover:opacity-60" : "hover:bg-[#f5f3f0]"}`}>
+                                  <a href={`#case-${block.id}`}
+                                    className="flex flex-1 items-center gap-2 min-w-0 text-[#6b6258] hover:text-[#2f3b35]"
+                                  >
+                                    <span className={`flex-none w-5 h-5 rounded text-[9px] font-bold flex items-center justify-center ${isHidden ? "bg-red-50 text-red-400" : "bg-[#f0eeeb] text-[#9a9186]"}`}>
+                                      {isHidden ? <EyeOff className="h-2.5 w-2.5" /> : completePairs}
+                                    </span>
+                                    <span className={`flex-1 truncate ${isHidden ? "line-through text-[#b0a89e]" : ""}`}>
+                                      {block.navLabel || block.title}
+                                    </span>
+                                  </a>
+                                  {isEditMode && (
+                                    <button
+                                      type="button"
+                                      onClick={(e) => { e.preventDefault(); toggleCaseHiddenById(block.id); }}
+                                      className={`flex-none rounded p-0.5 transition ${isHidden ? "text-red-400 hover:bg-red-50" : "text-[#c0b8ae] opacity-0 group-hover:opacity-100 hover:bg-[#f0eeeb] hover:text-[#8c7851]"}`}>
+                                        {isHidden ? <Eye className="h-3 w-3" /> : <EyeOff className="h-3 w-3" />}
+                                    </button>
+                                  )}
+                                </div>
+                              );
+                            })}
+                          </div>
+                        )}
+                    </div>
                   );
                 })}
               </nav>
+              {/* Sidebar footer */}
+              {!clientMode && isApiAvailable && (
+                <div className="flex-none border-t border-[#e8e5e0] px-4 py-3">
+                  <div className="flex items-center gap-2">
+                    <button
+                      type="button"
+                      onClick={() => setIsEditMode(false)}
+                      className={`flex flex-1 items-center justify-center gap-1.5 rounded-lg py-2 text-xs font-semibold transition ${!isEditMode ? "bg-[#2f3b35] text-white" : "bg-[#f5f3f0] text-[#6b6258] hover:bg-[#ebe8e3]"}`}>
+                      <Eye className="h-3 w-3" /> 展示</button>
+                    <button
+                      type="button"
+                      onClick={() => setIsEditMode(true)}
+                      className={`flex flex-1 items-center justify-center gap-1.5 rounded-lg py-2 text-xs font-semibold transition ${isEditMode ? "bg-[#8c7851] text-white" : "bg-[#f5f3f0] text-[#6b6258] hover:bg-[#ebe8e3]"}`}>
+                      <Pencil className="h-3 w-3" /> 编辑</button>
+                  </div>
+                  {saveStatus !== "idle" && (
+                    <div className="mt-2 text-center text-[10px] font-bold uppercase tracking-widest text-[#9a9186]">
+                      {saveStatus === "saving" ? "保存中..." : saveStatus === "saved" ? "已保存" : "保存失败"}
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           </aside>
+
           )}
 
           <div className="space-y-10">

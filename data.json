@@ -18,69 +18,251 @@
         {
           "id": "bl1",
           "label": "原图素材",
-          "url": "",
-          "aspectRatio": "1320 / 1740",
-          "aspectLabel": "3:4"
+          "url": "/uploads/file-1780045254082-79040279.jpg",
+          "aspectRatio": "1080 / 1349",
+          "aspectLabel": "4:5",
+          "width": 1080,
+          "height": 1349
         },
         {
           "id": "bl2",
           "label": "AI 溶图效果",
-          "url": "/uploads/file-1779074658269-336370941.png",
+          "url": "/uploads/file-1780045250477-986117642.jpg",
+          "aspectRatio": "3072 / 5504",
+          "aspectLabel": "9:16",
+          "width": 3072,
+          "height": 5504
+        },
+        {
+          "id": "bl3",
+          "label": "原图素材",
+          "url": "/uploads/file-1780046249545-228017169.jpg",
+          "aspectRatio": "1061 / 1680",
+          "aspectLabel": "2:3",
+          "width": 1061,
+          "height": 1680
+        },
+        {
+          "id": "bl4",
+          "label": "AI 溶图效果",
+          "url": "/uploads/file-1780045300340-971812494.jpg",
+          "aspectRatio": "3392 / 5056",
+          "aspectLabel": "2:3",
+          "width": 3392,
+          "height": 5056
+        },
+        {
+          "id": "blend-before-1779074843884",
+          "label": "原图",
+          "url": "/uploads/file-1780045460121-34152215.jpg",
+          "aspectRatio": "1130 / 1685",
+          "aspectLabel": "2:3",
+          "width": 1130,
+          "height": 1685
+        },
+        {
+          "id": "blend-after-1779074843884",
+          "label": "AI成图",
+          "url": "/uploads/file-1780045432283-913622230.jpg",
+          "aspectRatio": "3392 / 5056",
+          "aspectLabel": "2:3",
+          "width": 3392,
+          "height": 5056
+        },
+        {
+          "id": "blend-before-1779074868753",
+          "label": "原图",
+          "url": "/uploads/file-1780045453957-182732990.jpg",
+          "aspectRatio": "1130 / 1685",
+          "aspectLabel": "2:3",
+          "width": 1130,
+          "height": 1685
+        },
+        {
+          "id": "blend-after-1779074868753",
+          "label": "AI成图",
+          "url": "/uploads/file-1780045436879-672719656.jpg",
+          "aspectRatio": "3392 / 5056",
+          "aspectLabel": "2:3",
+          "width": 3392,
+          "height": 5056
+        },
+        {
+          "id": "blend-before-1780045878094",
+          "label": "原图",
+          "url": "/uploads/file-1780045892430-448634956.jpg",
+          "aspectRatio": "1280 / 1680",
+          "aspectLabel": "3:4",
+          "width": 1280,
+          "height": 1680
+        },
+        {
+          "id": "blend-after-1780045878094",
+          "label": "AI成图",
+          "url": "/uploads/file-1780045882511-414925679.jpg",
           "aspectRatio": "3584 / 4800",
           "aspectLabel": "3:4",
           "width": 3584,
           "height": 4800
         },
         {
-          "id": "bl3",
-          "label": "原图素材",
-          "url": "",
-          "aspectRatio": "3 / 4",
-          "aspectLabel": "3:4"
+          "id": "blend-before-1780045916331",
+          "label": "原图",
+          "url": "/uploads/file-1780045946682-992329640.jpg",
+          "aspectRatio": "1280 / 2175",
+          "aspectLabel": "9:16",
+          "width": 1280,
+          "height": 2175
         },
         {
-          "id": "bl4",
-          "label": "AI 溶图效果",
-          "url": "/uploads/file-1779074744118-120992604.png",
+          "id": "blend-after-1780045916331",
+          "label": "AI成图",
+          "url": "/uploads/file-1780045919842-816378210.jpg",
           "aspectRatio": "3072 / 5504",
           "aspectLabel": "9:16",
           "width": 3072,
           "height": 5504
         },
         {
-          "id": "blend-before-1779074843884",
+          "id": "blend-before-1780045955427",
           "label": "原图",
-          "url": "",
-          "aspectRatio": "6240 / 4160",
-          "aspectLabel": "3:2"
+          "url": "/uploads/file-1780046007769-861030413.jpg",
+          "aspectRatio": "1024 / 1834",
+          "aspectLabel": "9:16",
+          "width": 1024,
+          "height": 1834
         },
         {
-          "id": "blend-after-1779074843884",
+          "id": "blend-after-1780045955427",
           "label": "AI成图",
-          "url": "/uploads/file-1779074899570-308788858.jpg",
+          "url": "/uploads/file-1780045997100-744449802.jpg",
+          "aspectRatio": "2160 / 3840",
+          "aspectLabel": "9:16",
+          "width": 2160,
+          "height": 3840
+        },
+        {
+          "id": "blend-before-1780046017400",
+          "label": "原图",
+          "url": "/uploads/file-1780046074290-14970574.jpg",
           "aspectRatio": "3072 / 5504",
           "aspectLabel": "9:16",
           "width": 3072,
           "height": 5504
         },
         {
-          "id": "blend-before-1779074868753",
-          "label": "原图",
-          "url": "",
-          "aspectRatio": "16 / 9",
-          "aspectLabel": "16:9"
+          "id": "blend-after-1780046017400",
+          "label": "AI成图",
+          "url": "/uploads/file-1780046051162-598124979.jpg",
+          "aspectRatio": "3072 / 5504",
+          "aspectLabel": "9:16",
+          "width": 3072,
+          "height": 5504
         },
         {
-          "id": "blend-after-1779074868753",
+          "id": "blend-before-1780046087498",
+          "label": "原图",
+          "url": "/uploads/file-1780046188478-226189052.jpg",
+          "aspectRatio": "1024 / 1834",
+          "aspectLabel": "9:16",
+          "width": 1024,
+          "height": 1834
+        },
+        {
+          "id": "blend-after-1780046087498",
           "label": "AI成图",
-          "url": "/uploads/file-1779074873863-181322918.jpg",
-          "aspectRatio": "5056 / 3392",
-          "aspectLabel": "3:2",
-          "width": 5056,
-          "height": 3392
+          "url": "/uploads/file-1780046181605-548069689.jpg",
+          "aspectRatio": "3072 / 5504",
+          "aspectLabel": "9:16",
+          "width": 3072,
+          "height": 5504
+        },
+        {
+          "id": "blend-before-1780046197657",
+          "label": "原图",
+          "url": "/uploads/file-1780046277675-678558492.jpg",
+          "aspectRatio": "1080 / 1440",
+          "aspectLabel": "3:4",
+          "width": 1080,
+          "height": 1440
+        },
+        {
+          "id": "blend-after-1780046197657",
+          "label": "AI成图",
+          "url": "/uploads/file-1780046208001-651984581.jpg",
+          "aspectRatio": "3584 / 4800",
+          "aspectLabel": "3:4",
+          "width": 3584,
+          "height": 4800
+        },
+        {
+          "id": "blend-before-1780047247594",
+          "label": "原图",
+          "url": "",
+          "aspectRatio": "",
+          "aspectLabel": ""
+        },
+        {
+          "id": "blend-after-1780047247594",
+          "label": "AI成图",
+          "url": "/uploads/file-1780047306162-753169059.jpg",
+          "aspectRatio": "3072 / 5504",
+          "aspectLabel": "9:16",
+          "width": 3072,
+          "height": 5504
+        },
+        {
+          "id": "blend-before-1780047476086",
+          "label": "原图",
+          "url": "/uploads/file-1780047478795-115160574.jpg",
+          "aspectRatio": "1080 / 1349",
+          "aspectLabel": "4:5",
+          "width": 1080,
+          "height": 1349
+        },
+        {
+          "id": "blend-after-1780047476086",
+          "label": "AI成图",
+          "url": "/uploads/file-1780047485675-551687655.jpg",
+          "aspectRatio": "3072 / 5504",
+          "aspectLabel": "9:16",
+          "width": 3072,
+          "height": 5504
+        },
+        {
+          "id": "blend-before-1780047491754",
+          "label": "原图",
+          "url": "/uploads/file-1780047766844-369560968.jpg",
+          "aspectRatio": "945 / 1260",
+          "aspectLabel": "3:4",
+          "width": 945,
+          "height": 1260
+        },
+        {
+          "id": "blend-after-1780047491754",
+          "label": "AI成图",
+          "url": "/uploads/file-1780047754164-942277137.jpg",
+          "aspectRatio": "1376 / 768",
+          "aspectLabel": "16:9",
+          "width": 1376,
+          "height": 768
+        },
+        {
+          "id": "blend-before-1780047773161",
+          "label": "原图",
+          "url": "",
+          "aspectRatio": "",
+          "aspectLabel": ""
+        },
+        {
+          "id": "blend-after-1780047773161",
+          "label": "AI成图",
+          "url": "",
+          "aspectRatio": "",
+          "aspectLabel": ""
         }
       ],
-      "hidden": true
+      "hidden": false
     },
     {
       "id": "tone",
@@ -100,29 +282,253 @@
         {
           "id": "t1",
           "label": "原图",
-          "url": "",
-          "aspectRatio": "16 / 9"
+          "url": "/uploads/file-1780045109722-902388773.jpg",
+          "aspectRatio": "1080 / 1349",
+          "width": 1080,
+          "height": 1349,
+          "aspectLabel": "4:5"
         },
         {
           "id": "t2",
           "label": "AI成图",
-          "url": "",
-          "aspectRatio": "16 / 9"
+          "url": "/uploads/file-1780045105785-574676824.jpg",
+          "aspectRatio": "3072 / 5504",
+          "width": 3072,
+          "height": 5504,
+          "aspectLabel": "9:16"
         },
         {
           "id": "t3",
           "label": "原图",
-          "url": "",
-          "aspectRatio": "4 / 3"
+          "url": "/uploads/file-1780045798059-329089795.jpg",
+          "aspectRatio": "1280 / 1707",
+          "aspectLabel": "3:4",
+          "width": 1280,
+          "height": 1707
         },
         {
           "id": "t4",
           "label": "AI成图",
+          "url": "/uploads/file-1780045727870-849021696.jpg",
+          "aspectRatio": "3584 / 4800",
+          "aspectLabel": "3:4",
+          "width": 3584,
+          "height": 4800
+        },
+        {
+          "id": "tone-before-1780045171437",
+          "label": "原图",
+          "url": "/uploads/file-1780045792635-427626686.jpg",
+          "aspectRatio": "1280 / 1626",
+          "aspectLabel": "3:4",
+          "width": 1280,
+          "height": 1626
+        },
+        {
+          "id": "tone-after-1780045171437",
+          "label": "AI成图",
+          "url": "/uploads/file-1780045731365-918205378.jpg",
+          "aspectRatio": "3712 / 4608",
+          "aspectLabel": "4:5",
+          "width": 3712,
+          "height": 4608
+        },
+        {
+          "id": "tone-before-1780045733759",
+          "label": "原图",
+          "url": "/uploads/file-1780045816920-419041910.jpg",
+          "aspectRatio": "1280 / 1671",
+          "aspectLabel": "3:4",
+          "width": 1280,
+          "height": 1671
+        },
+        {
+          "id": "tone-after-1780045733759",
+          "label": "AI成图",
+          "url": "/uploads/file-1780045740907-748877472.jpg",
+          "aspectRatio": "3584 / 4800",
+          "aspectLabel": "3:4",
+          "width": 3584,
+          "height": 4800
+        },
+        {
+          "id": "tone-before-1780045742483",
+          "label": "原图",
+          "url": "/uploads/file-1780045826348-873705015.jpg",
+          "aspectRatio": "1280 / 1707",
+          "aspectLabel": "3:4",
+          "width": 1280,
+          "height": 1707
+        },
+        {
+          "id": "tone-after-1780045742483",
+          "label": "AI成图",
+          "url": "/uploads/file-1780045748924-443957823.jpg",
+          "aspectRatio": "3584 / 4800",
+          "aspectLabel": "3:4",
+          "width": 3584,
+          "height": 4800
+        },
+        {
+          "id": "tone-before-1780045831936",
+          "label": "原图",
+          "url": "/uploads/file-1780046339091-173212368.jpg",
+          "aspectRatio": "1280 / 1626",
+          "aspectLabel": "3:4",
+          "width": 1280,
+          "height": 1626
+        },
+        {
+          "id": "tone-after-1780045831936",
+          "label": "AI成图",
+          "url": "/uploads/file-1780046304995-644426608.jpg",
+          "aspectRatio": "3712 / 4608",
+          "aspectLabel": "4:5",
+          "width": 3712,
+          "height": 4608
+        },
+        {
+          "id": "tone-before-1780046308514",
+          "label": "原图",
+          "url": "/uploads/file-1780046331666-228742495.jpg",
+          "aspectRatio": "1280 / 1626",
+          "aspectLabel": "3:4",
+          "width": 1280,
+          "height": 1626
+        },
+        {
+          "id": "tone-after-1780046308514",
+          "label": "AI成图",
+          "url": "/uploads/file-1780046313416-745837416.jpg",
+          "aspectRatio": "3712 / 4608",
+          "aspectLabel": "4:5",
+          "width": 3712,
+          "height": 4608
+        },
+        {
+          "id": "tone-before-1780046694579",
+          "label": "原图",
+          "url": "/uploads/file-1780046738312-545732986.jpg",
+          "aspectRatio": "1280 / 1689",
+          "aspectLabel": "3:4",
+          "width": 1280,
+          "height": 1689
+        },
+        {
+          "id": "tone-after-1780046694579",
+          "label": "AI成图",
+          "url": "/uploads/file-1780046698069-691056687.jpg",
+          "aspectRatio": "5504 / 3072",
+          "aspectLabel": "16:9",
+          "width": 5504,
+          "height": 3072
+        },
+        {
+          "id": "tone-before-1780046750182",
+          "label": "原图",
+          "url": "/uploads/file-1780046756188-634587240.jpg",
+          "aspectRatio": "1280 / 1683",
+          "aspectLabel": "3:4",
+          "width": 1280,
+          "height": 1683
+        },
+        {
+          "id": "tone-after-1780046750182",
+          "label": "AI成图",
+          "url": "/uploads/file-1780047157251-863024908.jpg",
+          "aspectRatio": "5504 / 3072",
+          "aspectLabel": "16:9",
+          "width": 5504,
+          "height": 3072
+        },
+        {
+          "id": "tone-before-1780047583770",
+          "label": "原图",
+          "url": "/uploads/file-1780047617752-4139061.jpg",
+          "aspectRatio": "1080 / 1440",
+          "aspectLabel": "3:4",
+          "width": 1080,
+          "height": 1440
+        },
+        {
+          "id": "tone-after-1780047583770",
+          "label": "AI成图",
+          "url": "/uploads/file-1780047609205-474778046.jpg",
+          "aspectRatio": "1792 / 2400",
+          "aspectLabel": "3:4",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "id": "tone-before-1780047634619",
+          "label": "原图",
+          "url": "/uploads/file-1780047647630-331611321.jpg",
+          "aspectRatio": "1080 / 1440",
+          "aspectLabel": "3:4",
+          "width": 1080,
+          "height": 1440
+        },
+        {
+          "id": "tone-after-1780047634619",
+          "label": "AI成图",
+          "url": "/uploads/file-1780047640716-217382229.jpg",
+          "aspectRatio": "1792 / 2400",
+          "aspectLabel": "3:4",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "id": "tone-before-1780047653853",
+          "label": "原图",
+          "url": "/uploads/file-1780047657851-890540302.jpg",
+          "aspectRatio": "1080 / 1440",
+          "aspectLabel": "3:4",
+          "width": 1080,
+          "height": 1440
+        },
+        {
+          "id": "tone-after-1780047653853",
+          "label": "AI成图",
+          "url": "/uploads/file-1780047662939-976777589.jpg",
+          "aspectRatio": "1792 / 2400",
+          "aspectLabel": "3:4",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "id": "tone-before-1780047688957",
+          "label": "原图",
+          "url": "/uploads/file-1780047690443-751588684.jpg",
+          "aspectRatio": "1080 / 1404",
+          "aspectLabel": "3:4",
+          "width": 1080,
+          "height": 1404
+        },
+        {
+          "id": "tone-after-1780047688957",
+          "label": "AI成图",
+          "url": "/uploads/file-1780047702492-718721456.jpg",
+          "aspectRatio": "1792 / 2400",
+          "aspectLabel": "3:4",
+          "width": 1792,
+          "height": 2400
+        },
+        {
+          "id": "tone-before-1780047712088",
+          "label": "原图",
           "url": "",
-          "aspectRatio": "4 / 3"
+          "aspectRatio": "",
+          "aspectLabel": ""
+        },
+        {
+          "id": "tone-after-1780047712088",
+          "label": "AI成图",
+          "url": "",
+          "aspectRatio": "",
+          "aspectLabel": ""
         }
       ],
-      "hidden": true
+      "hidden": false
     },
     {
       "id": "pose",
@@ -142,14 +548,16 @@
         {
           "id": "p1",
           "label": "原图",
-          "url": "",
-          "aspectRatio": "3584 / 4800",
-          "aspectLabel": "3:4"
+          "url": "/uploads/file-1780045681632-781668230.jpg",
+          "aspectRatio": "1320 / 1746",
+          "aspectLabel": "3:4",
+          "width": 1320,
+          "height": 1746
         },
         {
           "id": "p2",
           "label": "AI成图",
-          "url": "/uploads/file-1779074568822-524549761.png",
+          "url": "/uploads/file-1780045583524-116325645.jpg",
           "aspectRatio": "3584 / 4800",
           "aspectLabel": "3:4",
           "width": 3584,
@@ -172,7 +580,7 @@
           "aspectLabel": "3:4"
         }
       ],
-      "hidden": true
+      "hidden": false
     },
     {
       "id": "angles",
@@ -192,32 +600,38 @@
         {
           "id": "a1",
           "label": "主视角原图",
-          "url": "/uploads/file-1779074273542-993578027.png",
-          "aspectRatio": "3584 / 4800",
-          "aspectLabel": "3:4",
-          "width": 3584,
-          "height": 4800
+          "url": "/uploads/file-1780045629202-716173358.jpg",
+          "aspectRatio": "1212 / 1920",
+          "aspectLabel": "2:3",
+          "width": 1212,
+          "height": 1920
         },
         {
           "id": "a2",
           "label": "AI 生成视角A (俯拍)",
-          "url": "",
-          "aspectRatio": "4 / 3",
-          "aspectLabel": "4:3"
+          "url": "/uploads/file-1780045530637-123927514.jpg",
+          "aspectRatio": "3392 / 5056",
+          "aspectLabel": "2:3",
+          "width": 3392,
+          "height": 5056
         },
         {
           "id": "a3",
           "label": "主视角原图",
-          "url": "",
-          "aspectRatio": "4 / 3",
-          "aspectLabel": "4:3"
+          "url": "/uploads/file-1780045647956-132559245.jpg",
+          "aspectRatio": "1320 / 1746",
+          "aspectLabel": "3:4",
+          "width": 1320,
+          "height": 1746
         },
         {
           "id": "a4",
           "label": "AI 生成视角B (特写)",
-          "url": "",
-          "aspectRatio": "4 / 3",
-          "aspectLabel": "4:3"
+          "url": "/uploads/file-1780045559656-146289020.jpg",
+          "aspectRatio": "3584 / 4800",
+          "aspectLabel": "3:4",
+          "width": 3584,
+          "height": 4800
         },
         {
           "id": "a5",
@@ -234,7 +648,7 @@
           "aspectLabel": "4:3"
         }
       ],
-      "hidden": true
+      "hidden": false
     },
     {
       "id": "inpainting",
@@ -254,33 +668,95 @@
         {
           "id": "in1",
           "label": "原图素材",
-          "url": "",
-          "aspectRatio": "3 / 4",
-          "aspectLabel": "3:4"
+          "url": "/uploads/file-1780047380847-486666009.jpg",
+          "aspectRatio": "1080 / 1076",
+          "aspectLabel": "1:1",
+          "width": 1080,
+          "height": 1076
         },
         {
           "id": "in2",
           "label": "AI 局部重绘",
-          "url": "",
-          "aspectRatio": "3 / 4",
-          "aspectLabel": "3:4"
+          "url": "/uploads/file-1780046107390-568665391.jpg",
+          "aspectRatio": "4096 / 4096",
+          "aspectLabel": "1:1",
+          "width": 4096,
+          "height": 4096
         },
         {
           "id": "in3",
           "label": "原图素材",
-          "url": "",
-          "aspectRatio": "16 / 9",
-          "aspectLabel": "16:9"
+          "url": "/uploads/file-1780047391220-379950150.jpg",
+          "aspectRatio": "1080 / 1076",
+          "aspectLabel": "1:1",
+          "width": 1080,
+          "height": 1076
         },
         {
           "id": "in4",
           "label": "AI 局部重绘",
-          "url": "",
-          "aspectRatio": "16 / 9",
-          "aspectLabel": "16:9"
+          "url": "/uploads/file-1780046117896-371912956.jpg",
+          "aspectRatio": "4096 / 4096",
+          "aspectLabel": "1:1",
+          "width": 4096,
+          "height": 4096
+        },
+        {
+          "id": "inpainting-before-1780046119249",
+          "label": "原图",
+          "url": "/uploads/file-1780047408775-463556697.jpg",
+          "aspectRatio": "816 / 656",
+          "aspectLabel": "5:4",
+          "width": 816,
+          "height": 656
+        },
+        {
+          "id": "inpainting-after-1780046119249",
+          "label": "AI成图",
+          "url": "/uploads/file-1780046122789-38696814.jpg",
+          "aspectRatio": "4608 / 3712",
+          "aspectLabel": "5:4",
+          "width": 4608,
+          "height": 3712
+        },
+        {
+          "id": "inpainting-before-1780046125837",
+          "label": "原图",
+          "url": "/uploads/file-1780047416508-117249017.jpg",
+          "aspectRatio": "1443 / 1080",
+          "aspectLabel": "4:3",
+          "width": 1443,
+          "height": 1080
+        },
+        {
+          "id": "inpainting-after-1780046125837",
+          "label": "AI成图",
+          "url": "/uploads/file-1780046129374-709731804.jpg",
+          "aspectRatio": "4800 / 3584",
+          "aspectLabel": "4:3",
+          "width": 4800,
+          "height": 3584
+        },
+        {
+          "id": "inpainting-before-1780046158978",
+          "label": "原图",
+          "url": "/uploads/file-1780047423891-917554320.jpg",
+          "aspectRatio": "1080 / 821",
+          "aspectLabel": "4:3",
+          "width": 1080,
+          "height": 821
+        },
+        {
+          "id": "inpainting-after-1780046158978",
+          "label": "AI成图",
+          "url": "/uploads/file-1780046162057-998118790.jpg",
+          "aspectRatio": "4800 / 3584",
+          "aspectLabel": "4:3",
+          "width": 4800,
+          "height": 3584
         }
       ],
-      "hidden": true
+      "hidden": false
     },
     {
       "id": "portrait-retouch",
@@ -326,7 +802,7 @@
           "aspectLabel": "1:1"
         }
       ],
-      "hidden": true
+      "hidden": false
     },
     {
       "id": "headshot-id-photo",
@@ -372,7 +848,7 @@
           "aspectLabel": "1:1"
         }
       ],
-      "hidden": true
+      "hidden": false
     },
     {
       "id": "expression-detail",
@@ -418,7 +894,7 @@
           "aspectLabel": "4:5"
         }
       ],
-      "hidden": true
+      "hidden": false
     },
     {
       "id": "old-photo-restore",
@@ -464,7 +940,7 @@
           "aspectLabel": "3:4"
         }
       ],
-      "hidden": true
+      "hidden": false
     },
     {
       "id": "upscale-enhance",
@@ -484,9 +960,11 @@
         {
           "id": "upscale-before-1",
           "label": "低清原图",
-          "url": "",
-          "aspectRatio": "4 / 3",
-          "aspectLabel": "4:3"
+          "url": "/uploads/file-1780045333512-992425927.jpg",
+          "aspectRatio": "600 / 400",
+          "aspectLabel": "3:2",
+          "width": 600,
+          "height": 400
         },
         {
           "id": "upscale-after-1",
@@ -498,9 +976,11 @@
         {
           "id": "upscale-before-2",
           "label": "局部细节原图",
-          "url": "",
-          "aspectRatio": "1 / 1",
-          "aspectLabel": "1:1"
+          "url": "/uploads/file-1780045338497-757082197.jpg",
+          "aspectRatio": "640 / 670",
+          "aspectLabel": "640:670",
+          "width": 640,
+          "height": 670
         },
         {
           "id": "upscale-after-2",
@@ -508,9 +988,41 @@
           "url": "",
           "aspectRatio": "1 / 1",
           "aspectLabel": "1:1"
+        },
+        {
+          "id": "upscale-enhance-before-1780045341362",
+          "label": "原图",
+          "url": "/uploads/file-1780045344238-65245174.jpg",
+          "aspectRatio": "402 / 354",
+          "aspectLabel": "402:354",
+          "width": 402,
+          "height": 354
+        },
+        {
+          "id": "upscale-enhance-after-1780045341362",
+          "label": "AI成图",
+          "url": "",
+          "aspectRatio": "",
+          "aspectLabel": ""
+        },
+        {
+          "id": "upscale-enhance-before-1780045345395",
+          "label": "原图",
+          "url": "/uploads/file-1780045348106-223732460.jpg",
+          "aspectRatio": "416 / 444",
+          "aspectLabel": "416:444",
+          "width": 416,
+          "height": 444
+        },
+        {
+          "id": "upscale-enhance-after-1780045345395",
+          "label": "AI成图",
+          "url": "",
+          "aspectRatio": "",
+          "aspectLabel": ""
         }
       ],
-      "hidden": true
+      "hidden": false
     },
     {
       "id": "outpaint-reframe",
@@ -570,7 +1082,7 @@
           "aspectLabel": "3:1"
         }
       ],
-      "hidden": true
+      "hidden": false
     }
   ],
   "siteConfig": {

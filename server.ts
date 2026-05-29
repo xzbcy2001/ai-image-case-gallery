@@ -75,13 +75,22 @@ async function startServer() {
     },
   });
 
+  function buildStoredUploadPayload(fileName: string, size: number) {
+    return {
+      url: `/uploads/${fileName}`,
+      projectStored: true,
+      storedInProject: true,
+      storedPath: `public/uploads/${fileName}`,
+      size,
+    };
+  }
+
   // API Route: Handle file uploads
   app.post("/api/upload", upload.single("file"), (req, res) => {
     if (!req.file) {
       return res.status(400).json({ error: "No file uploaded" });
     }
-    // Return relative URL assuming /uploads is served statically by Vite or Express
-    res.json({ url: `/uploads/${req.file.filename}` });
+    res.json(buildStoredUploadPayload(req.file.filename, req.file.size));
   });
 
   // API Route: Handle base64 uploads
@@ -103,8 +112,9 @@ async function startServer() {
       const outputPath = path.join(uploadsDir, outputFilename);
 
       fs.writeFileSync(outputPath, matches[2], "base64");
+      const stats = fs.statSync(outputPath);
 
-      res.json({ url: `/uploads/${outputFilename}` });
+      res.json(buildStoredUploadPayload(outputFilename, stats.size));
     } catch (err) {
       console.error(err);
       res.status(500).json({ error: "Failed to upload" });
